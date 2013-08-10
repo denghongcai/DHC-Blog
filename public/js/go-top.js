@@ -85,7 +85,7 @@ GoTop.prototype = {
 		var topLink = jQuery('#' + _self.config.nodeId);
 		if(jQuery(document).scrollTop() <= _self.config.hideRegionHeight) {
 			clearTimeout(_self.cache.topLinkThread);
-			topLink.hide();
+			topLink.fadeOut();
 			return;
 		}
 
