@@ -6,7 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
-exports.read = function(req,res){
+exports.index = function(req, res){
+    res.send("article");
+};
+
+exports.read = function(req, res){
     res.send("article content");
 };
 

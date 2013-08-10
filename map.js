@@ -13,6 +13,7 @@ var routes = require('./routes')
 module.exports = function(app){
     app.get('/', routes.index);
     app.get('/users', user.list);
+    app.get('/article/', article.index);
     app.get('/article/read/:id', article.read);
     app.post('/article/add', article.add);
     app.delete('/article/del/:id', article.del);
