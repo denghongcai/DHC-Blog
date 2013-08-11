@@ -8,5 +8,5 @@ exports.index = function(req, res){
 };
 
 exports.err404 = function(req, res){
-    res.render('err404', {title: 'DHC-Blog'});
+    res.render('err404', {title: 'DHC-Blog 404 error'});
 };

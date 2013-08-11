@@ -1,0 +1,61 @@
+<% include layoutTop %>
+    <style type="text/css">
+      
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 900px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      a#go-top {
+        background:#E6E6E6;
+        width:50px;
+        height:25px;
+        text-align:center;
+        text-decoration:none;
+        line-height:25px;
+        color:#999;
+      }
+      a#go-top:hover {
+        background:#CCC;
+        color:#333;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="navbar navbar-fixed-top" style="background: white;">
+      <div class="container-narrow">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#"><i class="fui-cmd" style="line-height: 15px;"></i> Home</a></li>
+          <li><a href="#"><i class="fui-list" style="line-height: 15px;"></i> Category</a>
+          <li><a href="#"><i class="fui-user" style="line-height: 15px;"></i> About</a></li>
+        </ul>
+        <h3 class="muted" style="line-height: 74px;"><%= title %></h3>
+      </div>
+    </div>
+    <div style="height: 40px"></div>
+    <div class="container-narrow">
+      <hr />
+
+      <div class="row-fluid">
+        <div class="span4">
+          <img src="images/icons/Mail@2x.png" alt="404" />
+        </div>
+        <div class="span8">
+          <h1 style="line-height:180px;">404 not found</h1>
+        </div>
+      </div>
+
+      <hr />
+
+<% include layoutBottom %>
