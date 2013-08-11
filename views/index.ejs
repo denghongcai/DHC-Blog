@@ -57,48 +57,47 @@
     <div class="navbar navbar-fixed-top" style="background: white;">
       <div class="container-narrow">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="#"><i class="fui-cmd" style="line-height: 15px;"></i> Home</a></li>
+          <li><a href="#"><i class="fui-list" style="line-height: 15px;"></i> Category</a>
+          <li><a href="#"><i class="fui-user" style="line-height: 15px;"></i> About</a></li>
         </ul>
         <h3 class="muted" style="line-height: 74px;"><%= title %></h3>
       </div>
     </div>
     <div style="height: 40px"></div>
     <div class="container-narrow">
-      <hr>
+      <hr />
 
-      <div class="jumbotron">
-        <h1>Super awesome marketing speak!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>
-      </div>
-
-      <hr>
-
-      <div class="row-fluid marketing">
-        <div class="span6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <div class="row-fluid">
+        <div class="span8">
+          <div class="span12">
+            <h1>Super awesome marketing speak!</h1>
+            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div>
+          <div class="span12">
+            <a class="btn btn-info pull-right" href="#">Sign up today</a>
+          </div>
         </div>
-
-        <div class="span6">
+        <div class="span4">
           <h4>Subheading</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <div id="myCanvasContainer">
+            <canvas width="300" height="300" id="myCanvas">
+              <p>Anything in here will be replaced on browsers that support the canvas element</p>
+            </canvas>
+          </div>
+          <div id="tags">
+            <ul>
+              <li><a href="http://www.google.com" target="_blank">Google</a></li>
+              <li><a href="/fish">Fish</a></li>
+              <li><a href="/chips">Chips</a></li>
+              <li><a href="/salt">Salt</a></li>
+              <li><a href="/vinegar">Vinegar</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <hr>
+      <hr />
+
 <% include layoutBottom %>

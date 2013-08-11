@@ -13,7 +13,7 @@ var express = require('express')
   , mongodb = require('mongoskin').db('localhost:27017/?auto_reconnect',
         {
             database: 'test',
-            safe: true
+            safe: false
         })
   , db = require('./db/db')
   , SkinStore = require('connect-mongoskin')
