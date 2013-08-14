@@ -3,10 +3,12 @@
  * GET home page.
  */
 
+var config = require('../config').config;
+
 exports.index = function(req, res){
-    res.render('index', { title: 'DHC-Blog' });
+    res.render('index', { title: config.site.SITE_NAME });
 };
 
 exports.err404 = function(req, res){
-    res.render('err404', {title: 'DHC-Blog'});
+    res.status(404).render('err404', { title: config.site.SITE_NAME });
 };

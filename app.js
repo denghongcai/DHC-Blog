@@ -13,7 +13,7 @@ var express = require('express')
   , mongodb = require('mongoskin').db('localhost:27017/?auto_reconnect',
         {
             database: 'test',
-            safe: false
+            safe: true
         })
   , db = require('./db/db')
   , SkinStore = require('connect-mongoskin')
@@ -21,12 +21,13 @@ var express = require('express')
 
 var app = express();
 
+global.mongodb = mongodb;
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(db.init());
-app.use(express.compress());
 app.use(express.favicon());
 app.use(express.cookieParser());
 app.use(express.session(
@@ -37,14 +38,25 @@ app.use(express.session(
     }));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(app.router);
+
 
 // development only
 if ('development' == app.get('env')) {
+    app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.logger('dev'));
     app.use(express.errorHandler());
 }
+
+// production only
+if ('production' == app.get('env')) {
+    var oneYear = 31557600000;
+    app.use(express.compress());
+    app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
+    app.use(express.errorHandler());
+    app.use(express.logger('product'));
+}
+
+app.use(app.router);
 
 //router
 map(app);
